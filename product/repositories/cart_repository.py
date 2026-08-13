@@ -24,6 +24,23 @@ def get_cart_item_by_id(
     )
 
 
+def get_cart_item_by_id_and_user(
+    db: Session,
+    cart_item_id: int,
+    user_id: int,
+) -> CartItem | None:
+    """Return a cart item only when it belongs to the user."""
+
+    return (
+        db.query(CartItem)
+        .filter(
+            CartItem.CartItemID == cart_item_id,
+            CartItem.UserID == user_id,
+        )
+        .first()
+    )
+
+
 def get_cart_item_by_user_and_product(
     db: Session,
     user_id: int,

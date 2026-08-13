@@ -2,12 +2,17 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from sqlalchemy import CheckConstraint, ForeignKey, Integer
+from sqlalchemy import (
+    CheckConstraint,
+    ForeignKey,
+    Integer,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from product.db.base import Base
 
-if TYPE_CHECKING:   #solve the circular import error (import is skipped during runtime)
+if TYPE_CHECKING:
     from product.models.product import Product
     from product.models.user import User
 
@@ -20,6 +25,11 @@ class CartItem(Base):
             "Quantity > 0",
             name="ck_cart_items_quantity_positive",
         ),
+        UniqueConstraint(
+            "UserID",
+            "ProductID",
+            name="uq_cart_items_user_product",
+        ),
     )
 
     CartItemID: Mapped[int] = mapped_column(
@@ -29,7 +39,7 @@ class CartItem(Base):
     )
 
     UserID: Mapped[int] = mapped_column(
-        ForeignKey("users.UserID"),
+        ForeignKey("users.UserID", ondelete="CASCADE"),
         nullable=False,
         index=True,
     )
@@ -44,6 +54,7 @@ class CartItem(Base):
         Integer,
         nullable=False,
         default=1,
+        server_default="1",
     )
 
     user: Mapped["User"] = relationship(

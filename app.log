@@ -1,0 +1,269 @@
+2026-08-13 10:01:29,622 - INFO - root - logger called
+2026-08-13 10:02:24,541 - INFO - root - logger called
+2026-08-13 10:02:29,763 - INFO - root - logger called
+2026-08-13 10:02:35,192 - INFO - root - logger called
+2026-08-13 10:02:39,716 - INFO - root - logger called
+2026-08-13 10:02:47,361 - INFO - root - logger called
+2026-08-13 10:02:50,352 - INFO - root - logger called
+2026-08-13 10:02:52,086 - INFO - root - logger called
+2026-08-13 10:03:01,281 - INFO - root - logger called
+2026-08-13 10:03:10,196 - INFO - root - logger called
+2026-08-13 10:03:18,967 - INFO - root - logger called
+2026-08-13 10:03:20,225 - INFO - root - logger called
+2026-08-13 10:03:25,073 - INFO - root - logger called
+2026-08-13 10:03:31,332 - INFO - root - logger called
+2026-08-13 10:03:41,775 - INFO - root - logger called
+2026-08-13 10:03:43,280 - INFO - root - logger called
+2026-08-13 10:04:02,466 - INFO - root - logger called
+2026-08-13 10:04:07,393 - INFO - root - logger called
+2026-08-13 10:07:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:07:44 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:08:37 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:08:39 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:17:42 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:23:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:27:36 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:30:13 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 10:32:06 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:04:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:04:02 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:04:04 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:04:09 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:04:17 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:17:04 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:17:06 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:17:10 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:17:12 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:17:23 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:40:55 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:40:56 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:11 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:13 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:21 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:35 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:36 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:41 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:42 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:47 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:48 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:51 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:56 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:41:58 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:42:10 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:42:11 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:42:22 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:42:24 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:42:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:45:43 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:53:34 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:55:34 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:56:05 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 11:59:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:04:10 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:05:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:08:35 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:08:53 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:10:16 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:13:12 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:13:32 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:15:37 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:16:00 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:20:45 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:21:13 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:21:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:26:26 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:42:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:42:39 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:42:43 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:42:55 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:44:33 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:48:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:48:39 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:48:50 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:54:19 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:54:20 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:54:22 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 12:54:33 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 14:21:08 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 14:22:56 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 14:22:57 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 14:45:15 - WARNING - product.utils.auth_dependencies - JWT token has expired
+2026-08-13 14:52:45 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 14:52:46 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 15:03:42 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 15:03:43 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 15:04:56 - WARNING - product.utils.auth_dependencies - JWT token has expired
+2026-08-13 15:05:18 - WARNING - product.utils.auth_dependencies - JWT token has expired
+2026-08-13 15:44:14 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 15:48:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 15:48:02 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 15:51:09 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:11:29 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:11:31 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:11:33 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:11:44 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:22:51 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:24:48 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:24:49 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:24:51 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:25:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:25:16 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:26:07 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:26:08 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:26:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:26:51 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:26:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:26:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:27:36 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:27:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:31:06 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:31:13 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:31:20 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:31:44 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:31:45 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:43:08 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:43:10 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:43:11 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:43:20 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:53:39 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:53:40 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:58:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 16:58:54 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:00:41 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:00:43 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:04:10 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:28:21 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:28:23 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:28:31 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:29:14 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:29:16 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 17:29:27 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:01:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:02:31 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:02:31 - INFO - product - logging configuration test
+2026-08-13 18:02:31 - INFO - product - this message should not be written
+2026-08-13 18:02:31 - WARNING - product - this warning should be written
+2026-08-13 18:05:20 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:05:20 - INFO - product - logging configuration test
+2026-08-13 18:05:20 - INFO - product - this message should not be written
+2026-08-13 18:05:20 - WARNING - product - this warning should be written
+2026-08-13 18:11:14 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:12:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:14:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:14:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:15:10 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:16:30 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:16:30 - INFO - product - logging configuration test
+2026-08-13 18:16:30 - INFO - product - this message should not be written
+2026-08-13 18:16:30 - WARNING - product - this warning should be written
+2026-08-13 18:17:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:17:01 - INFO - product - logging configuration test
+2026-08-13 18:19:20 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:20:52 - INFO - product.utils.logging_config - Login attempt for email=user@rani.com
+2026-08-13 18:28:41 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:28:45 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:28:49 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:28:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:29:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:30:34 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:30:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:30:46 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:51:27 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 18:51:41 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:39:24 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:39:35 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:05 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:07 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:16 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:18 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:23 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:25 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:30 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:31 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:35 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:42 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:44 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:48 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:51 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:57 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:46:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:02 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:07 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:13 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:22 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:23 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:25 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:30 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:35 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:40 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:43 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:51 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:55 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:47:56 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:07 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:08 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:12 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:19 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:23 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:27 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:33 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:39 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:41 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:44 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:46 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:47 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:52 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:54 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:48:57 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:03 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:07 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:09 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:12 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:21 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:23 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:25 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:31 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:33 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:38 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:49:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:50:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:50:05 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:50:10 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:50:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:50:26 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:50:39 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:50:40 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:51:01 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:51:02 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:51:14 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:51:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:58:06 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 20:58:19 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:09:54 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:10:44 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:10:49 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:10:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:13:00 - INFO - product.utils.logging_config - Login attempt for email=admin@aisha.com
+2026-08-13 23:15:12 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:21 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:33 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:34 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:36 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:45 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:49 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:51 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:15:59 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:16:15 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:16:15 - INFO - product - logging configuration test
+2026-08-13 23:16:37 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:17:48 - INFO - product.utils.logging_config - Application startup completed
+2026-08-13 23:18:05 - INFO - product.utils.logging_config - Login attempt for email=admin@aisha.com
+2026-08-13 23:22:48 - INFO - product.utils.logging_config - Login attempt for email=user@lara.com

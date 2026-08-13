@@ -1,48 +1,17 @@
 from decimal import Decimal
 
-from pydantic import AliasChoices, BaseModel, ConfigDict, Field
+from pydantic import (
+    AliasChoices,
+    BaseModel,
+    ConfigDict,
+    Field,
+)
 
 
-class CartItemCreate(BaseModel):    #Request Model
-    user_id: int = Field(
-        ...,
-        gt=0,
-    )
-
+class CartItemCreate(BaseModel):
     product_id: int = Field(
         ...,
         gt=0,
-    )
-
-    quantity: int = Field(
-        ...,
-        gt=0,
-    )
-
-
-class CartItemUpdate(BaseModel): 
-    quantity: int = Field(
-        ...,
-        gt=0,
-    )
-
-
-class CartItemResponse(BaseModel):  #Response Model
-    cart_item_id: int = Field(
-        validation_alias=AliasChoices(
-            "cart_item_id",
-            "CartItemID",
-        ),
-    )
-
-    user_id: int = Field(
-        validation_alias=AliasChoices(
-            "user_id",
-            "UserID",
-        ),
-    )
-
-    product_id: int = Field(
         validation_alias=AliasChoices(
             "product_id",
             "ProductID",
@@ -50,6 +19,63 @@ class CartItemResponse(BaseModel):  #Response Model
     )
 
     quantity: int = Field(
+        ...,
+        gt=0,
+        validation_alias=AliasChoices(
+            "quantity",
+            "Quantity",
+        ),
+    )
+
+    model_config = ConfigDict(
+        populate_by_name=True,
+        extra="forbid",
+    )
+
+
+class CartItemUpdate(BaseModel):
+    quantity: int = Field(
+        ...,
+        gt=0,
+        validation_alias=AliasChoices(
+            "quantity",
+            "Quantity",
+        ),
+    )
+
+    model_config = ConfigDict(
+        populate_by_name=True,
+        extra="forbid",
+    )
+
+
+class CartItemResponse(BaseModel):
+    cart_item_id: int = Field(
+        ...,
+        validation_alias=AliasChoices(
+            "cart_item_id",
+            "CartItemID",
+        ),
+    )
+
+    user_id: int = Field(
+        ...,
+        validation_alias=AliasChoices(
+            "user_id",
+            "UserID",
+        ),
+    )
+
+    product_id: int = Field(
+        ...,
+        validation_alias=AliasChoices(
+            "product_id",
+            "ProductID",
+        ),
+    )
+
+    quantity: int = Field(
+        ...,
         validation_alias=AliasChoices(
             "quantity",
             "Quantity",
@@ -72,7 +98,5 @@ class CartSummaryItem(BaseModel):
 
 class CartSummary(BaseModel):
     user_id: int
-    items: list[CartSummaryItem] = Field(
-        default_factory=list,
-    )
+    items: list[CartSummaryItem]
     total_amount: Decimal

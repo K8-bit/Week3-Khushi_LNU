@@ -3,7 +3,10 @@ from sqlalchemy.orm import Session
 from product.models.order import Order
 
 
-def create_order(db: Session, order: Order) -> Order:
+def create_order(
+    db: Session,
+    order: Order,
+) -> Order:
     db.add(order)
     db.commit()
     db.refresh(order)
@@ -21,6 +24,23 @@ def get_order_by_id(
     )
 
 
+def get_order_by_id_for_user(
+    db: Session,
+    order_id: int,
+    user_id: int,
+) -> Order | None:
+    """Return an order only when it belongs to the user."""
+
+    return (
+        db.query(Order)
+        .filter(
+            Order.OrderID == order_id,
+            Order.UserID == user_id,
+        )
+        .first()
+    )
+
+
 def get_orders_by_user(
     db: Session,
     user_id: int,
@@ -33,7 +53,9 @@ def get_orders_by_user(
     )
 
 
-def get_all_orders(db: Session) -> list[Order]:
+def get_all_orders(
+    db: Session,
+) -> list[Order]:
     return (
         db.query(Order)
         .order_by(Order.OrderDate.desc())

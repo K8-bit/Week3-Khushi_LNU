@@ -3,12 +3,20 @@ from __future__ import annotations
 from decimal import Decimal
 from typing import TYPE_CHECKING
 
-from sqlalchemy import CheckConstraint, ForeignKey, Integer, Numeric, String
+from sqlalchemy import (
+    Boolean,
+    CheckConstraint,
+    ForeignKey,
+    Integer,
+    Numeric,
+    String,
+    text,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from product.db.base import Base
 
-if TYPE_CHECKING:  #solve the circular import error (import is skipped during runtime)
+if TYPE_CHECKING:
     from product.models.cart import CartItem
     from product.models.category import Category
     from product.models.order_detail import OrderDetail
@@ -38,6 +46,7 @@ class Product(Base):
         String(150),
         unique=True,
         nullable=False,
+        index=True,
     )
 
     Description: Mapped[str | None] = mapped_column(
@@ -52,17 +61,23 @@ class Product(Base):
     )
 
     Price: Mapped[Decimal] = mapped_column(
-        Numeric(10, 2),
+        Numeric(12, 2),
         nullable=False,
     )
-
-
-   
 
     AvailableQuantity: Mapped[int] = mapped_column(
         Integer,
         nullable=False,
         default=0,
+        server_default="0",
+    )
+
+    IsActive: Mapped[bool] = mapped_column(
+        Boolean,
+        nullable=False,
+        default=True,
+        server_default=text("TRUE"),
+        index=True,
     )
 
     ProductUrl: Mapped[str | None] = mapped_column(

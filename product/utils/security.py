@@ -1,91 +1,81 @@
-import os
 from datetime import datetime, timedelta, timezone
+from typing import Any
+import os
 
-from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from jose import JWTError, jwt
+from dotenv import load_dotenv
+from jwt import decode, encode
 from pwdlib import PasswordHash
-from sqlalchemy.orm import Session
 
-from product.db.session import get_db
-from product.models.user import User
 
-SECRET_KEY = os.getenv(
-    "SECRET_KEY",
-    "replace-this-development-secret-key",
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+if not SECRET_KEY:
+    raise RuntimeError(
+        "SECRET_KEY is missing. Add it to the .env file."
+    )
+
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
+
+TOKEN_EXPIRE_MINUTES = int(
+    os.getenv("TOKEN_EXPIRE_MINUTES", "30")
 )
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
 password_hash = PasswordHash.recommended()
-bearer_scheme = HTTPBearer(auto_error=False)
 
 
 def hash_password(password: str) -> str:
+    """Hash a password before storing it."""
+
     return password_hash.hash(password)
 
-
+#Salt and Parameter
 def verify_password(
     plain_password: str,
     hashed_password: str,
 ) -> bool:
-    return password_hash.verify(
-        plain_password,
-        hashed_password,
+    """Verify a plain password against its stored hash."""
+
+    try:
+        return password_hash.verify(
+            plain_password,
+            hashed_password,
+        )
+    except Exception:
+        return False
+
+
+def create_access_token(
+    data: dict[str, Any],
+    expires_delta: timedelta | None = None,
+) -> str:
+    """Create a JWT access token."""
+
+    payload = data.copy()
+
+    expire_at = datetime.now(timezone.utc) + (
+        expires_delta
+        or timedelta(minutes=TOKEN_EXPIRE_MINUTES)
     )
 
+    payload["exp"] = expire_at
 
-def create_access_token(subject: str) -> str:
-    expires_at = datetime.now(timezone.utc) + timedelta(
-        minutes=ACCESS_TOKEN_EXPIRE_MINUTES,
-    )
 
-    payload = {
-        "sub": subject,
-        "exp": expires_at,
-    }
-
-    return jwt.encode(
+    return encode(
         payload,
         SECRET_KEY,
         algorithm=ALGORITHM,
     )
 
 
-def get_current_user(
-    credentials: HTTPAuthorizationCredentials | None = Depends(
-        bearer_scheme,
-    ),
-    db: Session = Depends(get_db),
-) -> User:
-    unauthorized = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Invalid or missing authentication token",
-        headers={"WWW-Authenticate": "Bearer"},
+def decode_access_token(
+    token: str,
+) -> dict[str, Any]:
+    """Decode and validate a JWT access token."""
+
+    return decode(
+        token,
+        SECRET_KEY,
+        algorithms=[ALGORITHM],
     )
-
-    if credentials is None:
-        raise unauthorized
-
-    try:
-        payload = jwt.decode(
-            credentials.credentials,
-            SECRET_KEY,
-            algorithms=[ALGORITHM],
-        )
-        subject = payload.get("sub")
-
-        if not subject:
-            raise unauthorized
-
-        user_id = int(subject)
-
-    except (JWTError, ValueError):
-        raise unauthorized
-
-    user = db.get(User, user_id)
-
-    if user is None:
-        raise unauthorized
-
-    return user

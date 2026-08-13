@@ -2,50 +2,20 @@ from fastapi import APIRouter, Depends, HTTPException, Path, Query, status
 from sqlalchemy.orm import Session
 
 from product.db.session import get_db
-from product.schemas.product_schema import ProductCreate, ProductResponse
+from product.schemas.product_schema import ProductResponse
 from product.services import product_service
 
 
 router = APIRouter(
     prefix="/products",
-    tags=["Products"],
+    tags=["Customer Products"],
 )
 
 
-@router.post(
-    "",
-    response_model=ProductResponse,
-    status_code=status.HTTP_201_CREATED,
-)
-def create_product(
-    product_data: ProductCreate,
-    db: Session = Depends(get_db),  #SQLAlchemy
-):
-    try:
-        return product_service.create_product(
-            db=db,
-            product_data=product_data,
-        )
-    except ValueError as error:
-        message = str(error)
-        message_lower = message.lower()
-
-        if "category" in message_lower:
-            error_status = status.HTTP_404_NOT_FOUND
-        elif "already exists" in message_lower:
-            error_status = status.HTTP_409_CONFLICT
-        else:
-            error_status = status.HTTP_400_BAD_REQUEST
-
-        raise HTTPException(
-            status_code=error_status,
-            detail=message,
-        ) from error
-
-#Retrieve the data
-@router.get(   
+@router.get(
     "",
     response_model=list[ProductResponse],
+    summary="Browse active products",
 )
 def get_products(
     db: Session = Depends(get_db),
@@ -56,6 +26,7 @@ def get_products(
 @router.get(
     "/search",
     response_model=list[ProductResponse],
+    summary="Search active products",
 )
 def search_products(
     name: str | None = Query(
@@ -80,9 +51,10 @@ def search_products(
 @router.get(
     "/{product_id}",
     response_model=ProductResponse,
+    summary="View product details",
 )
 def get_product(
-    product_id: int = Path(gt=0),
+    product_id: int = Path(..., gt=0),
     db: Session = Depends(get_db),
 ):
     product = product_service.get_product_by_id(

@@ -1,16 +1,19 @@
+from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from product.models.category import Category
 
 
-def create_category(db: Session, category: Category) -> Category:
+def create_category(
+    db: Session,
+    category: Category,
+) -> Category:
     db.add(category)
     db.commit()
     db.refresh(category)
     return category
 
 
-#Get operation by id
 def get_category_by_id(
     db: Session,
     category_id: int,
@@ -21,22 +24,25 @@ def get_category_by_id(
         .first()
     )
 
-#Get operation by name
+
 def get_category_by_name(
     db: Session,
     category_name: str,
 ) -> Category | None:
+    normalized_name = category_name.strip().lower()
+
     return (
         db.query(Category)
-        .filter(Category.CategoryName == category_name)
+        .filter(
+            func.lower(Category.CategoryName) == normalized_name,
+        )
         .first()
     )
 
-#Get operation by categories
+
 def get_all_categories(db: Session) -> list[Category]:
     return (
         db.query(Category)
         .order_by(Category.CategoryID)
         .all()
     )
-

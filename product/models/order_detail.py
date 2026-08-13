@@ -8,13 +8,14 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from product.db.base import Base
 
-if TYPE_CHECKING:   #solve the circular import error (import is skipped during runtime)
+if TYPE_CHECKING:
     from product.models.order import Order
     from product.models.product import Product
 
 
 class OrderDetail(Base):
     __tablename__ = "order_details"
+
     __table_args__ = (
         CheckConstraint(
             "Quantity > 0",
@@ -31,20 +32,24 @@ class OrderDetail(Base):
         primary_key=True,
         autoincrement=True,
     )
+
     OrderID: Mapped[int] = mapped_column(
-        ForeignKey("orders.OrderID"),
+        ForeignKey("orders.OrderID", ondelete="CASCADE"),
         nullable=False,
         index=True,
     )
+
     ProductID: Mapped[int] = mapped_column(
         ForeignKey("products.ProductID"),
         nullable=False,
         index=True,
     )
+
     Quantity: Mapped[int] = mapped_column(
         Integer,
         nullable=False,
     )
+
     Price: Mapped[Decimal] = mapped_column(
         Numeric(12, 2),
         nullable=False,
@@ -54,6 +59,7 @@ class OrderDetail(Base):
         "Order",
         back_populates="order_details",
     )
+
     product: Mapped["Product"] = relationship(
         "Product",
         back_populates="order_details",

@@ -20,6 +20,7 @@ class ProductCreate(BaseModel):
             "ProductName",
         ),
     )
+
     description: str | None = Field(
         default=None,
         max_length=1000,
@@ -28,6 +29,7 @@ class ProductCreate(BaseModel):
             "Description",
         ),
     )
+
     category_id: int = Field(
         ...,
         gt=0,
@@ -36,13 +38,18 @@ class ProductCreate(BaseModel):
             "CategoryID",
         ),
     )
+
     price: Decimal = Field(
         ...,
         gt=0,
         max_digits=10,
         decimal_places=2,
-        validation_alias=AliasChoices("price", "Price"),
+        validation_alias=AliasChoices(
+            "price",
+            "Price",
+        ),
     )
+
     available_quantity: int = Field(
         ...,
         ge=0,
@@ -51,6 +58,7 @@ class ProductCreate(BaseModel):
             "AvailableQuantity",
         ),
     )
+
     product_url: HttpUrl | None = Field(
         default=None,
         validation_alias=AliasChoices(
@@ -61,18 +69,36 @@ class ProductCreate(BaseModel):
 
     @field_validator("product_name")
     @classmethod
-    def normalize_product_name(cls, value: str) -> str:
-        return value.strip().title()
+    def normalize_product_name(
+        cls,
+        value: str,
+    ) -> str:
+        value = value.strip()
+
+        if not value:
+            raise ValueError(
+                "Product name cannot be empty"
+            )
+
+        return value.title()
 
     @field_validator("price")
     @classmethod
-    def validate_price(cls, value: Decimal) -> Decimal:
+    def validate_price(
+        cls,
+        value: Decimal,
+    ) -> Decimal:
         if value > Decimal("999999.99"):
-            raise ValueError("Price cannot exceed 999,999.99")
+            raise ValueError(
+                "Price cannot exceed 999,999.99"
+            )
 
         return value
 
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(
+        populate_by_name=True,
+        extra="forbid",
+    )
 
 
 class ProductUpdate(BaseModel):
@@ -85,6 +111,7 @@ class ProductUpdate(BaseModel):
             "ProductName",
         ),
     )
+
     description: str | None = Field(
         default=None,
         max_length=1000,
@@ -93,6 +120,7 @@ class ProductUpdate(BaseModel):
             "Description",
         ),
     )
+
     category_id: int | None = Field(
         default=None,
         gt=0,
@@ -101,13 +129,18 @@ class ProductUpdate(BaseModel):
             "CategoryID",
         ),
     )
+
     price: Decimal | None = Field(
         default=None,
         gt=0,
         max_digits=10,
         decimal_places=2,
-        validation_alias=AliasChoices("price", "Price"),
+        validation_alias=AliasChoices(
+            "price",
+            "Price",
+        ),
     )
+
     available_quantity: int | None = Field(
         default=None,
         ge=0,
@@ -116,6 +149,7 @@ class ProductUpdate(BaseModel):
             "AvailableQuantity",
         ),
     )
+
     product_url: HttpUrl | None = Field(
         default=None,
         validation_alias=AliasChoices(
@@ -133,9 +167,34 @@ class ProductUpdate(BaseModel):
         if value is None:
             return None
 
-        return value.strip().title()
+        value = value.strip()
 
-    model_config = ConfigDict(populate_by_name=True)
+        if not value:
+            raise ValueError(
+                "Product name cannot be empty"
+            )
+
+        return value.title()
+
+    @field_validator("price")
+    @classmethod
+    def validate_price(
+        cls,
+        value: Decimal | None,
+    ) -> Decimal | None:
+        if value is not None and value > Decimal(
+            "999999.99"
+        ):
+            raise ValueError(
+                "Price cannot exceed 999,999.99"
+            )
+
+        return value
+
+    model_config = ConfigDict(
+        populate_by_name=True,
+        extra="forbid",
+    )
 
 
 class ProductResponse(BaseModel):
@@ -146,6 +205,7 @@ class ProductResponse(BaseModel):
             "ProductID",
         ),
     )
+
     product_name: str = Field(
         ...,
         validation_alias=AliasChoices(
@@ -153,6 +213,7 @@ class ProductResponse(BaseModel):
             "ProductName",
         ),
     )
+
     description: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
@@ -160,6 +221,7 @@ class ProductResponse(BaseModel):
             "Description",
         ),
     )
+
     category_id: int = Field(
         ...,
         validation_alias=AliasChoices(
@@ -167,10 +229,15 @@ class ProductResponse(BaseModel):
             "CategoryID",
         ),
     )
+
     price: Decimal = Field(
         ...,
-        validation_alias=AliasChoices("price", "Price"),
+        validation_alias=AliasChoices(
+            "price",
+            "Price",
+        ),
     )
+
     available_quantity: int = Field(
         ...,
         validation_alias=AliasChoices(
@@ -178,11 +245,20 @@ class ProductResponse(BaseModel):
             "AvailableQuantity",
         ),
     )
+
     product_url: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "product_url",
             "ProductUrl",
+        ),
+    )
+
+    is_active: bool = Field(
+        default=True,
+        validation_alias=AliasChoices(
+            "is_active",
+            "IsActive",
         ),
     )
 
